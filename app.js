@@ -15,12 +15,10 @@ app.use(cookieParser());
 app.set('view engine', 'ejs');
 
 // database connection
-//const dbURI = 'mongodb+srv://admin:admin@cluster0.k7sbp.mongodb.net/node-auth';
-//const dbURI = 'mongodb+srv://admin:admin@cluster0.2heep.mongodb.net/node-auth';
 
 //mongodb+srv://<username>:<password>@cluster0.2heep.mongodb.net/?retryWrites=true&w=majority
 
-const dbURI = "mongodb://mongoadmin:bdung@localhost:27018"
+const dbURI = "mongodb://[user-name-from-docker]:[password]@localhost:27018"
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true})
   .then((result) => {
